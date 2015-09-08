@@ -1,9 +1,9 @@
 (function() {
 
-    var path = require('path'),
-        Dictionary = require('./dictionary');
+    var Class = rootRequire('utils/jhClass'),
+        Dictionary = rootRequire('utils/dictionary');
 
-    var Cache = {
+    module.exports = Class.create({
 
         dCACHE: null,
 
@@ -18,10 +18,6 @@
             {
             }
         }
-    };
-
-    var Class = Cache.constructor;
-    Class.prototype = Cache;
-    module.exports = Class;
+    });
 
 }());

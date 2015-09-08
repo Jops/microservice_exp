@@ -1,9 +1,9 @@
 (function() {
 
-    var path = require('path'),
-        XmlEvent = require('./events/xmlEvent');
+    var Class = rootRequire('utils/jhClass'),
+        XmlEvent = require('../events/xmlEvent');
 
-    var iSite2ContentReaderGateway = {
+    module.exports = Class.create({
         constructor: function()
         {
         },
@@ -17,10 +17,6 @@
                 xmlString: 'some xml'
             });
         }
-    };
-
-    var Class = iSite2ContentReaderGateway.constructor;
-    Class.prototype = iSite2ContentReaderGateway;
-    module.exports = Class;
+    });
 
 }());

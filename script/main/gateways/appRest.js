@@ -1,10 +1,10 @@
 (function() {
 
-    var path = require('path'),
-        SearchByIdEvent = require('./events/searchByIdEvent'),
-        Pipeline = require('./pipeline');
+    var Class = rootRequire('utils/jhClass'),
+        SearchByIdEvent = require('../events/searchByIdEvent'),
+        Pipeline = require('../services/pipeline');
 
-    var Gateway = {
+    module.exports = Class.create({
 
         view: '',
 
@@ -33,10 +33,6 @@
             // respond with view
             res.send(this.view);
         }
-    };
-
-    var Class = Gateway.constructor;
-    Class.prototype = Gateway;
-    module.exports = Class;
+    });
 
 }());

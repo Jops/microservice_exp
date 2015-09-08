@@ -1,9 +1,9 @@
 (function() {
 
-    var path = require('path'),
-        JsonQueryEvent = require('./events/jsonQueryEvent');
+    var Class = rootRequire('utils/jhClass'),
+        JsonQueryEvent = require('../events/jsonQueryEvent');
 
-    var iSite2QueryBuilder = {
+    module.exports = Class.create({
         constructor: function()
         {
         },
@@ -18,10 +18,6 @@
                 something: 'interesting'
             });
         }
-    };
-
-    var Class = iSite2QueryBuilder.constructor;
-    Class.prototype = iSite2QueryBuilder;
-    module.exports = Class;
+    });
 
 }());

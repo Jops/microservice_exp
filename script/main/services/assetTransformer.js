@@ -1,8 +1,8 @@
 (function() {
 
-    var path = require('path');
+    var Class = rootRequire('utils/jhClass');
 
-    var AssetTransformer = {
+    module.exports = Class.create({
         constructor: function()
         {
         },
@@ -17,10 +17,6 @@
                 xmlString: 'some xml'
             });
         }
-    };
-
-    var Class = AssetTransformer.constructor;
-    Class.prototype = AssetTransformer;
-    module.exports = Class;
+    });
 
 }());

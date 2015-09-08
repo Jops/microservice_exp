@@ -1,19 +1,19 @@
 (function() {
 
-    var path = require('path'),
-        Gateway = require('./gateway');
+    var Class = rootRequire('utils/jhClass'),
+        MainGateway = require('./gateways/appRest');
 
-    var Router = {
+    module.exports = Class.create({
 
-        gateway: null,
+        mainGateway: null,
 
         constructor: function( express, app, dir )
         {
-            this.gateway = new Gateway();
+            this.mainGateway = new MainGateway();
 
             app.get(
-                '/searchById/:id',
-                this.gateway.searchById
+                '/search-by-id/:id',
+                this.mainGateway.searchById
             );
 
             app.get(
@@ -23,10 +23,6 @@
                 }
             );
         }
-    };
-
-    var Class = Router.constructor;
-    Class.prototype = Router;
-    module.exports = Class;
+    });
 
 }());

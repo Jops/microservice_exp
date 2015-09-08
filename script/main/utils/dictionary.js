@@ -1,6 +1,8 @@
 (function() {
 
-    var Dictionary = {
+    var Class = rootRequire('utils/jhClass');
+
+    module.exports = Class.create({
 
         overwrite: true,
         KEYS: [],
@@ -58,10 +60,6 @@
         {
             return this.KEYS.length;
         }
-    };
-
-    var Class = Dictionary.constructor;
-    Class.prototype = Dictionary;
-    module.exports = Class;
+    });
 
 }());

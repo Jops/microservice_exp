@@ -1,11 +1,11 @@
 (function() {
 
-    var path = require('path'),
+    var Class = rootRequire('utils/jhClass'),
         ISite2QueryBuilder = require('./iSite2QueryBuilder'),
-        ISite2ContentReaderGateway = require('./iSite2ContentReaderGateway'),
+        ISite2ContentReaderGateway = require('../gateways/iSite2ContentReader'),
         AssetTransformer = require('./assetTransformer');
 
-    var Pipeline = {
+    module.exports = Class.create({
 
         aSERVICES: null,
 
@@ -28,10 +28,6 @@
 
             return searchEvent;
         }
-    };
-
-    var Class = Pipeline.constructor;
-    Class.prototype = Pipeline;
-    module.exports = Class;
+    });
 
 }());
