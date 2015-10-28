@@ -1,0 +1,16 @@
+{
+    "domain": "isite-content-reader",
+    "version": "1.0.0",
+    "responses": {
+        "file": "200"
+    },
+    "routes": [
+        {
+            "name": "file",
+            "route": "/content/file",
+            "200": "({'xmlString':('content file for an id: ' + req.query.id)})",
+            "404": "'404 response'",
+            "500": "'500 response'"
+        }
+    ]
+}

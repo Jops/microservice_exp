@@ -14,7 +14,7 @@
             // from expected query event
             // create xml event and return
             return new XmlEvent({
-                xmlString: 'some xml'
+                xmlString: 'some xml for ' + query.query.query
             });
         }
     });

@@ -1,0 +1,16 @@
+{
+    "domain": "asset-transformer",
+    "version": "1.0.0",
+    "responses": {
+        "transform": "200"
+    },
+    "routes": [
+        {
+            "name": "transform",
+            "route": "/transform",
+            "200": "({'xmlString':(req.query.xml)})",
+            "404": "'404 response'",
+            "500": "'500 response'"
+        }
+    ]
+}

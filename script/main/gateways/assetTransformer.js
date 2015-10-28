@@ -1,6 +1,7 @@
 (function() {
 
-    var Class = rootRequire('utils/jhClass');
+    var Class = rootRequire('utils/jhClass'),
+        XmlEvent = require('../events/xmlEvent');
 
     module.exports = Class.create({
         constructor: function()
@@ -14,7 +15,7 @@
             // create xml event to contain transformed xml
             // return event
             return new XmlEvent({
-                xmlString: 'some xml'
+                xmlString: 'transformed xml for ' + query.xml.xmlString
             });
         }
     });

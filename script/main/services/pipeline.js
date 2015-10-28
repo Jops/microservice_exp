@@ -1,9 +1,9 @@
 (function() {
 
     var Class = rootRequire('utils/jhClass'),
-        ISite2QueryBuilder = require('./iSite2QueryBuilder'),
-        ISite2ContentReaderGateway = require('../gateways/iSite2ContentReader'),
-        AssetTransformer = require('./assetTransformer');
+        ISite2QueryBuilder = require('../gateways/iSite2QueryBuilder'),
+        ISite2ContentReader = require('../gateways/iSite2ContentReader'),
+        AssetTransformer = require('../gateways/assetTransformer');
 
     module.exports = Class.create({
 
@@ -12,8 +12,8 @@
         constructor: function()
         {
             this.aSERVICES = [
-                new iSite2QueryBuilder(),
-                new iSite2ContentReaderGateway(),
+                new ISite2QueryBuilder(),
+                new ISite2ContentReader(),
                 new AssetTransformer()
             ];
         },

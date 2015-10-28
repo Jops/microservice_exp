@@ -1,0 +1,32 @@
+{
+    "domain": "query-builder",
+    "version": "1.0.0",
+    "responses": {
+        "query-by-id": "200",
+        "query-by-type": "200",
+        "query-by-version": "200"
+    },
+    "routes": [
+        {
+            "name": "query-by-id",
+            "route": "/query-by-id/:id",
+            "200": "({'query':('search for an id: ' + req.params.id)})",
+            "404": "'404 response'",
+            "500": "'500 response'"
+        },
+        {
+            "name": "query-by-type",
+            "route": "/query-by-type/:type",
+            "200": "({'query':('search for a type: ' + req.params.type)})",
+            "404": "'404 response'",
+            "500": "'500 response'"
+        },
+        {
+            "name": "query-by-version",
+            "route": "/query-by-version/:version",
+            "200": "({'query':('search for version: ' + req.params.version)})",
+            "404": "'404 response'",
+            "500": "'500 response'"
+        }
+    ]
+}

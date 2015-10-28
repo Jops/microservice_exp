@@ -14,8 +14,7 @@
             // build query json
             // build json query event and return
             return new JsonQueryEvent({
-                id: query.id,
-                something: 'interesting'
+                query: 'interesting query for ' + query.id
             });
         }
     });

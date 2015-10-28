@@ -1,23 +1,25 @@
 {
-    "name": "microservices-hack",
-    "version": "0.0.1",
-    "description": "socket.io app for Microservice experiment",
-    "dependencies": {
-        "express": "^4.10.2",
-        "sanitize-html": "^1.4.3",
-        "socket.io": "^1.2.1"
-    },
-    "devDependencies": {
-        "mocha": "^2.2.5",
-        "nock": "^2.10.0",
-        "should": "^3.3.1",
-        "sinon": "^1.16.1"
-    },
-    "config" : {
-        "port" : "3000"
-    },
-    "scripts": {
-        "start": "node ./script/main/app.js",
-        "test": "./node_modules/.bin/_mocha ./script/test --recursive -r should"
-    }
+  "name": "microservices-hack",
+  "version": "0.0.1",
+  "description": "socket.io app for Microservice experiment",
+  "dependencies": {
+    "express": "^4.10.2",
+    "http-proxy": "^1.11.2",
+    "minimist": "^1.2.0",
+    "sanitize-html": "^1.4.3",
+    "socket.io": "^1.2.1"
+  },
+  "devDependencies": {
+    "mocha": "^2.2.5",
+    "nock": "^2.10.0",
+    "should": "^3.3.1",
+    "sinon": "^1.16.1"
+  },
+  "config": {
+    "port": "3000"
+  },
+  "scripts": {
+    "start": "node ./script/main/app.js",
+    "test": "./node_modules/.bin/_mocha ./script/test --recursive -r should"
+  }
 }

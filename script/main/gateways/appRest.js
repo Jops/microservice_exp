@@ -19,10 +19,11 @@
                 // create command/query event
                 var searchEvent = new SearchByIdEvent(req.params.id);
                 // send event to the pipeline
-                // var pipeline = new Pipeline();
-                // var serviceResponce = pipeline.search(searchEvent);
+                var pipeline = new Pipeline();
+                var serviceResponce = pipeline.search(searchEvent);
 
-                this.view = '<p>OK</p>';
+                this.view = '<p>OK</p>' +
+                '<p>' + serviceResponce.xml.xmlString + '</p>';
             }
             else
             {
